@@ -1,0 +1,213 @@
+:root {
+  --color: #fff;
+  --white: #03838D;
+}
+  body{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .be-vietnam.pro-regular {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .be-vietnam.pro-medium {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .be-vietnam.pro-semibold {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .be-vietnam.pro-bold {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .navTrigger {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    z-index: 1000;
+    width: 38px;
+    height: 38px;
+    background: none;
+    border: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    -webkit-appearence: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .navTrigger:focus {
+    outline: none;
+  }
+  .navTrigger svg {
+    height: 46px;
+    top: -6px;
+    left: -28px;
+    stroke: var(--color);
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+    position: absolute;
+  }
+  .navTrigger svg path {
+    transition: stroke-dasharray var(--duration, 0.85s) var(--easing, ease)
+        var(--delay, 0s),
+      stroke-dashoffset var(--duration, 0.85s) var(--easing, ease)
+        var(--delay, 0s);
+    stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+    stroke-dashoffset: var(--offset, 126px);
+    transform: translateZ(0);
+  }
+  .navTrigger svg path:nth-child(2) {
+    --duration: 0.7s;
+    --easing: ease-in;
+    --offset: 100px;
+    --array-2: 74px;
+  }
+  .navTrigger svg path:nth-child(3) {
+    --offset: 133px;
+    --array-2: 107px;
+  }
+  .navTrigger.active svg {
+    stroke: var(--white);
+  }
+  .navTrigger.active svg path {
+    --offset: 57px;
+  }
+  .navTrigger.active svg path:nth-child(1),
+  .navTrigger.active svg path:nth-child(3) {
+    --delay: 0.15s;
+    --easing: cubic-bezier(0.2, 0.4, 0.2, 1.1);
+  }
+  .navTrigger.active svg path:nth-child(2) {
+    --duration: 0.4s;
+    --offset: 2px;
+    --array-1: 1px;
+  }
+  .navTrigger.active svg path:nth-child(3) {
+    --offset: 58px;
+  }
+  
+  .navMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all 0.375s;
+  }
+  .navMenu.active {
+    opacity: 1;
+    z-index: 100;
+    visibility: visible;
+    height: 100vh;
+  }
+  .navMenu.active::before {
+    transform: skew(-14deg) translateX(0);
+  }
+  .navMenu.active li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .navMenu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -15px;
+    background: var(--color);
+    transform-origin: 0 0;
+    transform: skew(-14deg) translateX(-120%);
+    transition: all 0.275s 0.1s;
+  }
+  .navMenu ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    flex-direction: column;
+    height: 93%;
+    align-items: flex-end;
+    justify-content: center;
+    transform: translateX(-18%) skew(-16deg);
+  }
+  .navMenu ul li {
+    display: block;
+    margin: 0.5rem 0;
+    text-align: right;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .navMenu ul li a {
+    position: relative;
+    left: 0;
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    transform: skew(16deg);
+    transition: 0.25s;
+  }
+  .navMenu ul li a:hover {
+    left: 10px;
+  }
+  .navMenu ul li:nth-child(1) {
+    transition: all 275ms 275ms;
+  }
+  .navMenu ul li:nth-child(2) {
+    transition: all 275ms 325ms;
+  }
+  .navMenu ul li:nth-child(3) {
+    transition: all 275ms 375ms;
+  }
+  .navMenu ul li:nth-child(4) {
+    transition: all 275ms 425ms;
+  }
+  .navMenu ul li:nth-child(5) {
+    transition: all 275ms 475ms;
+  }
+  .navfont a {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+  }
+  
+  .icondown.showicon,.icondown2,.icondown4,.icondown3.showicon {
+    display: none;
+  }
+  .icondown2.showicon,.icondown4.showicon{
+    display: block;
+  }
+  .videoabsolute {
+    position: absolute;
+    top: 20%;
+    width: 100px;
+    right: 58%;}
+  
+  .desktop-only{ display: block; }
+    .mobile-only{display: none;}
+  @media screen and (min-width: 0px) and (max-width: 1023px) {
+    .desktop-only{ display: none; }
+    .mobile-only{display: block;}
+    .videoabsolute { position: absolute; top: -18px; width: 77px; left: 24%; }
+
+  }
+
+  .detail-list img, .detail-list p {
+    padding-bottom: 1.5rem;
+}

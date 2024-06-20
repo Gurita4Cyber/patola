@@ -1,0 +1,19 @@
+
+.rounded-lg.overflow-hidden {
+    height: 180px;
+}
+
+.rounded-lg.overflow-hidden.w-full.lg\:h-full {
+    height: 100%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1023px) {
+    .rounded-lg.overflow-hidden {
+        height: auto;
+    }
+    
+    .rounded-lg.overflow-hidden.w-full.lg\:h-full {
+        height: auto;
+    }
+
+  }
